@@ -1,0 +1,36 @@
+body{
+font-family: Arial;
+background: linear-gradient(to right,#ffb6c1,#ffe6f2);
+text-align:center;
+margin:0;
+}
+
+header{
+background:#ff1493;
+color:white;
+padding:20px;
+}
+
+.container{
+margin:30px;
+}
+
+input,select{
+padding:8px;
+margin:8px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 20px;
+background:#ff1493;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#c71585;
+}
