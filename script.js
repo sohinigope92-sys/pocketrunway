@@ -1,35 +1,30 @@
-function recommend(){
-
-let gender=document.getElementById("gender").value;
-let event=document.getElementById("event").value;
-let mood=document.getElementById("mood").value;
-
-let suggestion="";
-
-if(gender=="Female"){
-    if(event=="Wedding"){
-        suggestion="Pastel Lehenga + Pearl Jewellery + Soft Glam Makeup";
-    }
-    else if(event=="Party"){
-        suggestion="Black Bodycon + Minimal Accessories";
-    }
-    else{
-        suggestion="Indo Western Outfit + Light Makeup";
-    }
-}
-else{
-    if(event=="Wedding"){
-        suggestion="Sherwani + Mojari + Classic Watch";
-    }
-    else if(event=="Party"){
-        suggestion="Blazer + Slim Fit Trousers";
-    }
-    else{
-        suggestion="Casual Kurta + Sneakers";
-    }
+function signup(){
+let u=document.getElementById("username").value;
+let p=document.getElementById("password").value;
+localStorage.setItem(u,p);
+alert("Signup Successful");
 }
 
-document.getElementById("result").innerHTML=
-"Recommended Style: "+suggestion+
-"<br>Aesthetic Preference: "+mood;
+function login(){
+let u=document.getElementById("username").value;
+let p=document.getElementById("password").value;
+let stored=localStorage.getItem(u);
+if(stored==p){
+alert("Login Successful");
+}else{
+alert("Wrong Details");
+}
+}
+
+function detectSkin(){
+let result=document.getElementById("skinResult");
+result.innerHTML="Suggested Colors: Pastel Pink, Navy Blue, Beige";
+}
+
+function addProduct(){
+alert("Product Added for Rent/Sell");
+}
+
+function resell(){
+alert("Your worn cloth is listed for selling");
 }
