@@ -1,30 +1,68 @@
-function signup(){
-let u=document.getElementById("username").value;
-let p=document.getElementById("password").value;
-localStorage.setItem(u,p);
-alert("Signup Successful");
-}
-
 function login(){
-let u=document.getElementById("username").value;
-let p=document.getElementById("password").value;
-let stored=localStorage.getItem(u);
-if(stored==p){
-alert("Login Successful");
-}else{
-alert("Wrong Details");
-}
-}
-
-function detectSkin(){
-let result=document.getElementById("skinResult");
-result.innerHTML="Suggested Colors: Pastel Pink, Navy Blue, Beige";
+alert("Login Successful!");
 }
 
 function addProduct(){
-alert("Product Added for Rent/Sell");
+let name=document.getElementById("product").value;
+let price=document.getElementById("price").value;
+alert("Product Uploaded: "+name+" ₹"+price);
 }
 
-function resell(){
-alert("Your worn cloth is listed for selling");
+function showBoard(){
+alert("SmoothBoard Activated!");
+}
+
+function detectSkinTone(){
+
+let gender=document.getElementById("gender").value;
+let occasion=document.getElementById("occasion").value;
+
+if(gender==="" || occasion===""){
+alert("Select Gender & Occasion");
+return;
+}
+
+let options="";
+
+if(gender==="male"){
+
+if(occasion==="wedding"){
+options="Sherwani\nKurta Pajama\nSuit";
+}
+
+else if(occasion==="party"){
+options="Blazer + Jeans\nSlim Shirt\nJacket";
+}
+
+else if(occasion==="office"){
+options="Formal Shirt\nTie + Trousers";
+}
+
+else{
+options="Tshirt + Jeans\nHoodie";
+}
+}
+
+else{
+
+if(occasion==="wedding"){
+options="Saree\nLehenga\nGown";
+}
+
+else if(occasion==="party"){
+options="Cocktail Dress\nSkirt Top";
+}
+
+else if(occasion==="office"){
+options="Formal Kurti\nBlazer";
+}
+
+else{
+options="Top + Jeans\nFloral Dress";
+}
+}
+
+document.getElementById("result").innerText=
+"Recommended Outfits:\n\n"+options;
+
 }
