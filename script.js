@@ -8,6 +8,12 @@ let price=document.getElementById("price").value;
 alert("Product Uploaded: "+name+" ₹"+price);
 }
 
+function flipSell(){
+let cloth=document.getElementById("usedcloth").value;
+let price=document.getElementById("usedprice").value;
+alert("Used Cloth Listed: "+cloth+" ₹"+price);
+}
+
 function showBoard(){
 alert("SmoothBoard Activated!");
 }
@@ -31,7 +37,7 @@ options="Sherwani\nKurta Pajama\nSuit";
 }
 
 else if(occasion==="party"){
-options="Blazer + Jeans\nSlim Shirt\nJacket";
+options="Blazer + Jeans\nSlim Shirt";
 }
 
 else if(occasion==="office"){
