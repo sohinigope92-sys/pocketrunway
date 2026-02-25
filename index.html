@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PocketRunway</title>
-    <link rel="stylesheet" href="style.css">
+<title>PocketRunway</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>👗 PocketRunway</h1>
-    <p>Smart Outfit Recommendation Platform</p>
+<h1>🌸 PocketRunway</h1>
+<p>Your Personal Outfit Planner</p>
 </header>
 
 <div class="container">
@@ -19,35 +19,36 @@
 <select id="account">
 <option value="">Choose</option>
 <option value="buyer">Buyer</option>
-<option value="seller">Seller / Business</option>
+<option value="seller">Seller</option>
+<option value="flip">Flip (Sell Used Clothes)</option>
 </select>
 </div>
 
 <div class="card">
 <h2>Login / Signup</h2>
-<input type="text" placeholder="Username" id="username">
-<input type="password" placeholder="Password" id="password">
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
 <button onclick="login()">Login</button>
 </div>
 
 <div class="card">
 <h2>Budget</h2>
-<input type="number" id="budget" placeholder="Enter any budget ₹100 - ₹10,00,000">
+<input type="number" id="budget" placeholder="Enter Any Budget">
 </div>
 
 <div class="card">
 <h2>Gender</h2>
 <select id="gender">
-<option value="">Choose Gender</option>
+<option value="">Choose</option>
 <option value="male">Male</option>
 <option value="female">Female</option>
 </select>
 </div>
 
 <div class="card">
-<h2>Select Occasion</h2>
+<h2>Occasion</h2>
 <select id="occasion">
-<option value="">Choose Occasion</option>
+<option value="">Choose</option>
 <option value="wedding">Wedding</option>
 <option value="party">Party</option>
 <option value="office">Office</option>
@@ -56,25 +57,32 @@
 </div>
 
 <div class="card">
-<h2>Upload Photo for Skin Tone</h2>
+<h2>Upload Photo</h2>
 <input type="file" id="imageInput">
-<button onclick="detectSkinTone()">Detect Outfit</button>
+<button onclick="detectSkinTone()">Get Outfit</button>
 </div>
 
 <div class="card">
-<h2>SmoothBoard (Try Outfit Ideas)</h2>
-<button onclick="showBoard()">Show Suggestions</button>
+<h2>SmoothBoard</h2>
+<button onclick="showBoard()">Try Outfit Ideas</button>
 </div>
 
 <div class="card">
-<h2>Seller Upload Product</h2>
-<input type="text" placeholder="Product Name" id="product">
-<input type="number" placeholder="Price" id="price">
-<button onclick="addProduct()">Upload Product</button>
+<h2>Upload Product (Seller)</h2>
+<input type="text" id="product" placeholder="Product Name">
+<input type="number" id="price" placeholder="Price">
+<button onclick="addProduct()">Upload</button>
 </div>
 
 <div class="card">
-<h2>Recommendation Result</h2>
+<h2>Flip Section ♻️</h2>
+<input type="text" id="usedcloth" placeholder="Used Cloth Name">
+<input type="number" id="usedprice" placeholder="Selling Price">
+<button onclick="flipSell()">Sell Used Cloth</button>
+</div>
+
+<div class="card">
+<h2>Recommendation</h2>
 <p id="result"></p>
 </div>
 
