@@ -7,88 +7,59 @@
 
 <body>
 
-<header>
 <h1>PocketRunway</h1>
-<p>AI Powered Budget Stylist</p>
-</header>
 
-<div class="container">
-
+<div class="login">
 <h2>Login / Signup</h2>
-<input type="text" placeholder="Enter Email">
-<input type="password" placeholder="Enter Password">
-<button>Login</button>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="signup()">Sign Up</button>
+<button onclick="login()">Login</button>
+</div>
 
-<hr>
+<div class="budget">
+<h2>Enter Your Budget</h2>
+<input type="number" id="budget" placeholder="Enter any budget ₹100 - ₹10,00,000+">
+</div>
 
-<h2>Select Fashion Category</h2>
-<select id="gender">
-<option>Female</option>
-<option>Male</option>
-</select>
+<div class="photo">
+<h2>Upload Your Photo (Skin Tone Detection)</h2>
+<input type="file" id="photoUpload">
+<button onclick="detectSkin()">Detect Skin Tone</button>
+<p id="skinResult"></p>
+</div>
 
-<h2>Select Event</h2>
-<select id="event">
+<div class="mood">
+<h2>Upload Moodboard</h2>
+<input type="file">
+</div>
+
+<div class="profession">
+<h2>Choose Profession</h2>
+<select id="profession">
 <option>Wedding</option>
+<option>Dance Performance</option>
+<option>Office</option>
 <option>Party</option>
-<option>Dance</option>
-<option>College Fest</option>
 </select>
+</div>
 
-<h2>Enter Budget</h2>
-<select>
-<option>500₹</option>
-<option>1000₹</option>
-<option>5000₹</option>
-<option>10000₹</option>
+<div class="seller">
+<h2>Business Account</h2>
+<input type="text" id="productName" placeholder="Product Name">
+<input type="number" id="price" placeholder="Price">
+<select id="type">
+<option>Rent</option>
+<option>Sell</option>
 </select>
+<button onclick="addProduct()">Add Product</button>
+</div>
 
-<h2>Describe Your Aesthetic</h2>
-<input type="text" id="mood" placeholder="Royal / Minimal / Pastel">
-
-<button onclick="recommend()">Get Recommendation</button>
-
-<div id="result"></div>
-
-<hr>
-
-<h2>Rent an Outfit</h2>
-<select>
-<option>Bridal Lehenga</option>
-<option>Suit / Sherwani</option>
-<option>Anarkali</option>
-<option>Blazer Set</option>
-</select>
-<button>Book for Rent</button>
-
-<hr>
-
-<h2>Book Makeup Artist</h2>
-<select>
-<option>Bridal Makeup</option>
-<option>Party Makeup</option>
-<option>HD Makeup</option>
-</select>
-<button>Book Now</button>
-
-<hr>
-
-<h2>Payment</h2>
-<select>
-<option>UPI</option>
-<option>Card</option>
-<option>Cash on Delivery</option>
-</select>
-<button>Proceed to Pay</button>
-
-<hr>
-
-<h2>Delivery Speed</h2>
-<select>
-<option>Normal (3-5 Days)</option>
-<option>Express (1-2 Days)</option>
-</select>
-
+<div class="resell">
+<h2>Sell Your Worn Clothes</h2>
+<input type="text" id="wornCloth" placeholder="Cloth Name">
+<input type="number" id="wornPrice" placeholder="Lower Price">
+<button onclick="resell()">Sell</button>
 </div>
 
 <script src="script.js"></script>
