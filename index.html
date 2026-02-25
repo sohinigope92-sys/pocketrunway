@@ -7,87 +7,110 @@
 
 <body>
 
-<header>
 <h1>🌸 PocketRunway</h1>
-<p>Your Personal Outfit Planner</p>
-</header>
 
-<div class="container">
-
-<div class="card">
-<h2>Account Type</h2>
-<select id="account">
-<option value="">Choose</option>
-<option value="buyer">Buyer</option>
-<option value="seller">Seller</option>
-<option value="flip">Flip (Sell Used Clothes)</option>
-</select>
-</div>
-
-<div class="card">
-<h2>Login / Signup</h2>
-<input type="text" id="username" placeholder="Username">
-<input type="password" id="password" placeholder="Password">
+<div class="box">
+<h2>Login / SignUp</h2>
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
 <button onclick="login()">Login</button>
 </div>
 
-<div class="card">
-<h2>Budget</h2>
-<input type="number" id="budget" placeholder="Enter Any Budget">
+<div class="box">
+<h2>Account Type</h2>
+<select id="account">
+<option>Buyer</option>
+<option>Seller</option>
+<option>Flip Seller</option>
+</select>
 </div>
 
-<div class="card">
+<div class="box">
+<h2>Budget</h2>
+<input type="number" id="budget" placeholder="₹100 to ₹10,00,000+">
+</div>
+
+<div class="box">
 <h2>Gender</h2>
 <select id="gender">
-<option value="">Choose</option>
-<option value="male">Male</option>
-<option value="female">Female</option>
+<option>Male</option>
+<option>Female</option>
 </select>
 </div>
 
-<div class="card">
+<div class="box">
 <h2>Occasion</h2>
 <select id="occasion">
-<option value="">Choose</option>
-<option value="wedding">Wedding</option>
-<option value="party">Party</option>
-<option value="office">Office</option>
-<option value="casual">Casual</option>
+<option>Wedding</option>
+<option>Party</option>
+<option>Office</option>
+<option>Casual</option>
 </select>
 </div>
 
-<div class="card">
-<h2>Upload Photo</h2>
-<input type="file" id="imageInput">
-<button onclick="detectSkinTone()">Get Outfit</button>
+<div class="box">
+<h2>Dress Type</h2>
+<select id="dress">
+<option>Lehenga</option>
+<option>Saree</option>
+<option>Anarkali</option>
+<option>Suit</option>
+<option>Gown</option>
+</select>
 </div>
 
-<div class="card">
-<h2>SmoothBoard</h2>
-<button onclick="showBoard()">Try Outfit Ideas</button>
+<div class="box">
+<h2>Delivery</h2>
+<select id="delivery">
+<option>Normal Delivery</option>
+<option>Express Delivery</option>
+</select>
 </div>
 
-<div class="card">
-<h2>Upload Product (Seller)</h2>
-<input type="text" id="product" placeholder="Product Name">
+<div class="box">
+<h2>Pinterest MoodBoard</h2>
+<button onclick="moodboard()">Suggest Outfit</button>
+</div>
+
+<div class="box">
+<h2>Salon / Makeup Booking</h2>
+<button onclick="bookSalon()">Book Artist</button>
+</div>
+
+<div class="box">
+<h2>Seller Upload Product</h2>
+<input type="text" id="pname" placeholder="Product Name">
 <input type="number" id="price" placeholder="Price">
+<input type="file" id="pimage">
 <button onclick="addProduct()">Upload</button>
 </div>
 
-<div class="card">
+<div class="box">
 <h2>Flip Section ♻️</h2>
-<input type="text" id="usedcloth" placeholder="Used Cloth Name">
+<input type="text" id="usedname" placeholder="Used Cloth">
 <input type="number" id="usedprice" placeholder="Selling Price">
-<button onclick="flipSell()">Sell Used Cloth</button>
+<button onclick="sellUsed()">Sell</button>
 </div>
 
-<div class="card">
-<h2>Recommendation</h2>
+<div class="box">
+<h2>Rental Option</h2>
+<button onclick="rentDress()">Rent Dress</button>
+</div>
+
+<h2>Recommendation Box</h2>
 <p id="result"></p>
-</div>
 
-</div>
+<h2>Products</h2>
+<div id="products"></div>
+
+<h2>Cart</h2>
+<div id="cart"></div>
+
+<button onclick="payNow()">Proceed To Pay</button>
+
+<p>Collaborations: Nykaa | Myntra | Savanah</p>
 
 <script src="script.js"></script>
+
 </body>
 </html>
