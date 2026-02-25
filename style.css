@@ -1,49 +1,32 @@
 body{
-margin:0;
+background:linear-gradient(to right,#ffc0cb,#ffb6c1);
 font-family:Arial;
-background:linear-gradient(135deg,#ffb6c1,#ffc0cb,#ffd1dc);
-}
-
-header{
-background:#ff69b4;
-color:white;
 text-align:center;
-padding:20px;
 }
 
-.container{
+.box{
+background:white;
+margin:20px;
+padding:15px;
+border-radius:15px;
+box-shadow:0px 0px 10px grey;
+}
+
+#products{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 }
 
 .card{
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(10px);
-width:300px;
-margin:15px;
-padding:15px;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-}
-
-input,select{
-width:100%;
-padding:8px;
-margin:5px 0;
-border-radius:5px;
-}
-
-button{
-background:#ff1493;
-color:white;
-border:none;
+background:white;
+margin:10px;
 padding:10px;
-width:100%;
-cursor:pointer;
-border-radius:5px;
+width:150px;
+box-shadow:0px 0px 5px grey;
 }
 
-button:hover{
-background:#ff69b4;
+img{
+width:100px;
+height:100px;
 }
