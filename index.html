@@ -1,68 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PocketRunway</title>
-<link rel="stylesheet" href="style.css">
+    <title>PocketRunway</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>PocketRunway</h1>
+<header>
+    <h1>👗 PocketRunway</h1>
+    <p>Smart Outfit Recommendation Platform</p>
+</header>
 
-<div class="login">
+<div class="container">
+
+<div class="card">
+<h2>Account Type</h2>
+<select id="account">
+<option value="">Choose</option>
+<option value="buyer">Buyer</option>
+<option value="seller">Seller / Business</option>
+</select>
+</div>
+
+<div class="card">
 <h2>Login / Signup</h2>
-<input type="text" id="username" placeholder="Username">
-<input type="password" id="password" placeholder="Password">
-<button onclick="signup()">Sign Up</button>
+<input type="text" placeholder="Username" id="username">
+<input type="password" placeholder="Password" id="password">
 <button onclick="login()">Login</button>
 </div>
 
-<div class="budget">
-<h2>Enter Your Budget</h2>
-<input type="number" id="budget" placeholder="Enter any budget ₹100 - ₹10,00,000+">
+<div class="card">
+<h2>Budget</h2>
+<input type="number" id="budget" placeholder="Enter any budget ₹100 - ₹10,00,000">
 </div>
 
-<div class="photo">
-<h2>Upload Your Photo (Skin Tone Detection)</h2>
-<input type="file" id="photoUpload">
-<button onclick="detectSkin()">Detect Skin Tone</button>
-<p id="skinResult"></p>
-</div>
-
-<div class="mood">
-<h2>Upload Moodboard</h2>
-<input type="file">
-</div>
-
-<div class="profession">
-<h2>Choose Profession</h2>
-<select id="profession">
-<option>Wedding</option>
-<option>Dance Performance</option>
-<option>Office</option>
-<option>Party</option>
+<div class="card">
+<h2>Gender</h2>
+<select id="gender">
+<option value="">Choose Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
 </select>
 </div>
 
-<div class="seller">
-<h2>Business Account</h2>
-<input type="text" id="productName" placeholder="Product Name">
-<input type="number" id="price" placeholder="Price">
-<select id="type">
-<option>Rent</option>
-<option>Sell</option>
+<div class="card">
+<h2>Select Occasion</h2>
+<select id="occasion">
+<option value="">Choose Occasion</option>
+<option value="wedding">Wedding</option>
+<option value="party">Party</option>
+<option value="office">Office</option>
+<option value="casual">Casual</option>
 </select>
-<button onclick="addProduct()">Add Product</button>
 </div>
 
-<div class="resell">
-<h2>Sell Your Worn Clothes</h2>
-<input type="text" id="wornCloth" placeholder="Cloth Name">
-<input type="number" id="wornPrice" placeholder="Lower Price">
-<button onclick="resell()">Sell</button>
+<div class="card">
+<h2>Upload Photo for Skin Tone</h2>
+<input type="file" id="imageInput">
+<button onclick="detectSkinTone()">Detect Outfit</button>
+</div>
+
+<div class="card">
+<h2>SmoothBoard (Try Outfit Ideas)</h2>
+<button onclick="showBoard()">Show Suggestions</button>
+</div>
+
+<div class="card">
+<h2>Seller Upload Product</h2>
+<input type="text" placeholder="Product Name" id="product">
+<input type="number" placeholder="Price" id="price">
+<button onclick="addProduct()">Upload Product</button>
+</div>
+
+<div class="card">
+<h2>Recommendation Result</h2>
+<p id="result"></p>
+</div>
+
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
