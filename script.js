@@ -1,74 +1,58 @@
+let cart=[];
+
 function login(){
-alert("Login Successful!");
+alert("Login Successful");
+}
+
+function moodboard(){
+let o=document.getElementById("occasion").value;
+document.getElementById("result").innerHTML=
+"MoodBoard Suggestion for "+o;
+}
+
+function bookSalon(){
+alert("Salon / Makeup Artist Booked!");
+}
+
+function rentDress(){
+alert("Dress Rental Booked!");
 }
 
 function addProduct(){
-let name=document.getElementById("product").value;
+
+let name=document.getElementById("pname").value;
 let price=document.getElementById("price").value;
-alert("Product Uploaded: "+name+" ₹"+price);
+let img=document.getElementById("pimage").files[0];
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+let div=document.createElement("div");
+div.className="card";
+
+div.innerHTML=
+"<img src='"+e.target.result+"'><br>"+
+name+" ₹"+price+
+"<br><button onclick='addToCart("+price+")'>Add</button>";
+
+document.getElementById("products").appendChild(div);
+
 }
 
-function flipSell(){
-let cloth=document.getElementById("usedcloth").value;
-let price=document.getElementById("usedprice").value;
-alert("Used Cloth Listed: "+cloth+" ₹"+price);
+reader.readAsDataURL(img);
 }
 
-function showBoard(){
-alert("SmoothBoard Activated!");
+function addToCart(price){
+cart.push(price);
+document.getElementById("cart").innerHTML="Items: "+cart.length;
 }
 
-function detectSkinTone(){
-
-let gender=document.getElementById("gender").value;
-let occasion=document.getElementById("occasion").value;
-
-if(gender==="" || occasion===""){
-alert("Select Gender & Occasion");
-return;
+function sellUsed(){
+alert("Used Cloth Listed!");
 }
 
-let options="";
-
-if(gender==="male"){
-
-if(occasion==="wedding"){
-options="Sherwani\nKurta Pajama\nSuit";
-}
-
-else if(occasion==="party"){
-options="Blazer + Jeans\nSlim Shirt";
-}
-
-else if(occasion==="office"){
-options="Formal Shirt\nTie + Trousers";
-}
-
-else{
-options="Tshirt + Jeans\nHoodie";
-}
-}
-
-else{
-
-if(occasion==="wedding"){
-options="Saree\nLehenga\nGown";
-}
-
-else if(occasion==="party"){
-options="Cocktail Dress\nSkirt Top";
-}
-
-else if(occasion==="office"){
-options="Formal Kurti\nBlazer";
-}
-
-else{
-options="Top + Jeans\nFloral Dress";
-}
-}
-
-document.getElementById("result").innerText=
-"Recommended Outfits:\n\n"+options;
-
+function payNow(){
+let d=document.getElementById("delivery").value;
+alert("Payment Successful via "+d);
 }
